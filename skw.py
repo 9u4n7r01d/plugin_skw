@@ -64,7 +64,7 @@ def build_statistics_embed():
     return create_info_embed(
         title="Challenge role statistics",
         description="\n".join(
-            [f"\N{BULLET} `{count or 0 :>05}` <@&{role_id}> " for role_id, count in skw.d.role_stats_cache.items()]
+            [f"\N{BULLET} `{count or 0 :>5}` <@&{role_id}> " for role_id, count in skw.d.role_stats_cache.items()]
         ),
     )
 
