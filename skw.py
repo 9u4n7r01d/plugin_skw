@@ -113,8 +113,8 @@ async def soul_knight_wikia_roles(ctx: context.Context):
 
 
 @skw.command
-@lightbulb.command("clearcache", description="Clear cache status, forcing a rebuild next command")
 @lightbulb.add_checks(lightbulb.checks.owner_only)
+@lightbulb.command("clearcache", description="Clear cache status, forcing a rebuild next command")
 @lightbulb.implements(*Global.COMMAND_IMPLEMENTS)
 async def skw_clearcache(ctx: context.Context):
     skw.d.cache_built = False
